@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  youtube-slack:
+    build: ./
+    container_name: youtube-slack
+    image: youtube-slack:latest
+    restart: unless-stopped
