@@ -28,6 +28,7 @@ def play_video(ack,body):
     time.sleep(5)
     video = driver.find_element("id","movie_player")
     video.send_keys("K")
+    video.send_keys("F")
     title = (driver.find_element("xpath","/html/body/ytd-app/div[1]/ytd-page-manager/ytd-watch-flexy/div[5]/div[1]/div/div[2]/ytd-watch-metadata/div/div[1]/h1/yt-formatted-string")).text
     print(title)
     while True:
