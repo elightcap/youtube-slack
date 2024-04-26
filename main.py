@@ -23,6 +23,7 @@ def play_video(ack,body):
     ack()
     url = body["text"]
     driver = webdriver.Firefox()
+    driver.maximize_window()
     driver.get(url)
     time.sleep(5)
     video = driver.find_element("id","movie_player")
