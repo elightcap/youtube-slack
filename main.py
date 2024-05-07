@@ -21,6 +21,8 @@ app = App(
 @app.command("/youtube")
 def play_video(ack,body):
     ack()
+    try:
+        os.system("pkill firefox")
     url = body["text"]
     driver = webdriver.Firefox()
     driver.maximize_window()
