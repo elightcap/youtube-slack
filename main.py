@@ -23,6 +23,8 @@ def play_video(ack,body):
     ack()
     try:
         os.system("pkill firefox")
+    except:
+        print("no firefox")
     url = body["text"]
     driver = webdriver.Firefox()
     driver.maximize_window()
